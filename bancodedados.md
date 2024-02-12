@@ -143,7 +143,17 @@ A cardinalidade está associada a um relacionamento e no diagrama ER é represen
 
 - Modelo de dados que representa um banco de dados como uma coleção de relações. Uma relação remete a uma tabela de valores, na qual cada linha representa uma coleção de valores (colunas) relacionados.
 
-Uma linha representa um fato que tipicamente corresponde a uma entidade ou relacionamento do mundo real. 
+Uma linha representa um fato que tipicamente corresponde a uma entidade ou relacionamento do mundo real.
+
+- Glossário para o modelo relacional:
+    - Relação -> tabela
+    - Tupla -> linha (registro)
+    - Atributo -> coluna (campo)
+    - Domínio -> tipo de dado
+
+### Ordenação de Registros em uma tabela:
+
+Uma tabela é definida
 
 ## Semana 3: Sistemas de gerenciamento de banco de dados de mercado e normalização
 
