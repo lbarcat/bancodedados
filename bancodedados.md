@@ -266,8 +266,40 @@ FUNCIONÁRIO -> 1 -> GERÊNCIA -> 1 -> DEPARTAMENTO
 Escolhas uma **abordagem:**
 
 1 - Abordagem da chave estrangeira (mais comum)
+2 - Abordagem da relação unificada
+3 - Abordagem referência cruzada ou relação de relacionamento
 
+- **Abordagem da chave estrangeira:**
+    - escolha uma das tabelas, por exemplo a tabela S - e inclua como chave estrangeira em S a chave primária de T;
+    - se houver tipo entidade com participação total envolvido no relacionamento, escolhê-lo para o papel de S será a melhor opção;
+    - inclua todos os atributos simples, e os componentes simples dos atributos compostos, do tipo relacionamento como atributos de S.
 
+- **Abordagem da relação unificada:**
+    - unifique os dois tipos entidade e o tipo relacionamento é uma única tabela.
+    - isso é possível quando ambos os tipos entidade possuem participação total, indicando que as duas relações referentes aos tipos entidade participantes do relacionamento possuem sempre o mesmo número de registros.
+
+- **Abordagem referência cruzada:**
+    - crie uma terceira tabela para atuar como uma referência cruzada das chaves primárias de cada uma das duas tabelas S e T;
+    - a terceira tabela incluirá as chaves primárias de S e T como chaves estrangeiras;
+    - a chave primária da terceira tabela será uma das duas chaves estrangeiras, e a outra chave estrangeira será uma chave única.
+
+## Mapeando tipos de relacionamentos binários 1:N (N:1):
+
+- para cada tipo relacionamento regular binário 1:N, identifique a tabela S que representa o tipo entidade que participa do tipo relacionamento uma vez.
+
+- inclua a chave primária da tabela T (a outra entidade que participa do relacionamento) como chave estrangeira na tabela S;
+
+- inclua como atributo de S todos os atirbutos simples, e os componentes simples dos atributos compostos, do tipo relacionamento.
+
+## Mapeando tipos de relacionamentos binários M:N:
+
+- para cada tipo relacionamento binário M:N crie uma nova tabela para representar o relacionamento;
+
+- inclua como chaves estrangeiras na nova tabela as chaves primárias das tabelas que representam as entidades participantes do relacionamento;
+
+- a chave primária da nova tabela é a combinação dessas chaves estrangeiras;
+
+- também inclua todos os atributos simples, ou componentes simples de atributos compostos, como atributos na nova tabela.
 
 
 ## Semana 3: Sistemas de gerenciamento de banco de dados de mercado e normalização
