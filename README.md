@@ -1,8 +1,8 @@
 # Banco de Dados
 
-![Alt text](image.png)
+![mind map](image.png)
 
-
+Link do Mind Map: https://www.mindmeister.com/app/map/3158841554
 
 ## Semana 1: Introdução a banco de dados e modelo entidade relacionamento
 
