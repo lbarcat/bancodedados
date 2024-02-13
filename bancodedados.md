@@ -301,8 +301,53 @@ Escolhas uma **abordagem:**
 
 - também inclua todos os atributos simples, ou componentes simples de atributos compostos, como atributos na nova tabela.
 
-
 ## Semana 3: Sistemas de gerenciamento de banco de dados de mercado e normalização
+
+### Market Share - Banco de dados (infinidade de rankings):
+
+- Oracle
+- MySQL
+- Microsoft SQL Server
+- PostgreSQL
+- MongoDB
+- IBM Db2
+- Redis
+- Elasticsearch
+- SQLite
+- Microsoft Access
+
+### Elementos que compõem o Score:
+
+- Número de menções em Websites (Google e Bing)
+- Interesse no sistema (Google Trends)
+- Frequência de discussão em listas relevantes:
+    - Stack Overflow e DBA Stack Exchange
+- Número de ofertas de emprego:
+    - Indeed e Simply Hired
+- Número de Perfis profissionais que os sistemas são mencionados (LinkedIn)
+- Número de menções em rede social (Twitter)
+
+### Tipos de bancos:
+
+- 7 dos 10 sistemas listados são primariamente BD **relacionais.:**
+    - Oracle, MySQL, SQL Server, PostgreSQL, DB2, SQLite e Access
+- MongoDB é de **documentos**
+- Redis é **chave-valor**
+- Elasticsearch é **mecanismo de busca**
+- 8 deles sai de modelos múltiplos:
+    - Relacional, Documentos, Grafos, Espacial, RDF, time séries
+ 
+### Breve abordagem sobre os mais utilizados:
+
+- A probabilidade de atuar com banco de dados usando Oracle, MySQL, PostgreSQL ou SQL Server é extremamente grande.
+
+- Importante observar os detalhes desses produtos.
+
+- Atualmente, com o advento do Big Data e das possibilidades tecnológicas disponíveis, bancos do tipo chave-valor, de documentos e de grafos passam a ser muito recorrentes também, mas ainda com uso restrito.
+
+### Oracle:
+
+
 
 ## Semana 4: Introdução a linguagem SQL, Indexação e ferramentas de manipulação de banco de dados
 
