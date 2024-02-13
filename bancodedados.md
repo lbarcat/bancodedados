@@ -155,36 +155,36 @@ Uma linha representa um fato que tipicamente corresponde a uma entidade ou relac
 
 Uma tabela é definida como um conjunto de registros. Elementos de um conjunto não são ordenados. Assim, os registros em uma tabela não possuem nenhuma ordenação.
 
-## Ordenação de Valores dentro de um registro:
+### Ordenação de Valores dentro de um registro:
 
 Um registro é uma lista ordenada de valores, então a ordem do valores no registro é importante.
     - Para efeitos práticos, e em determinadas situações, essa restrição pode ser flexibilizada.
 
-## Valores e NULL nos registros:
+### Valores e NULL nos registros:
 
 Cada valor em um registro é um valor atômico. Assim, atributos compostos e atributos multivalorados não são permitidos.
 
 Valores **NULL** são usados para representar os valores desconhecidos ou que não se aplicam aquele atributo naquele registro.
 
-## Restrições de Domínio:
+### Restrições de Domínio:
 
 Restrições de domínio especificam que o valor de cada atributo A deve ser um valor atômico dentro de um domínio dom(A), em todos os registros da tabela.
 
-## Restrições de Chave:
+### Restrições de Chave:
 
 Por definição, todos os elementos de um conjunto são distintos, logo, todos os registros em uma tabela devem ser distintos, ou seja, dois registros quaisquel não podem ter a mesma combinação de valores para todos os seus atributos.
 
 - r1[SK] <> r2[SK]
 
-## Superchave:
+### Superchave:
 
 Qualquer conjunto de atributos SK. Toda relação tem pelo menos uma superchave - todos os seus atributos. Uma superchave pode ter atributos redundantes.
 
-## Chave:
+### Chave:
 
 É uma superchave de T sem atributos redundantes; i.e. é um conjuntode atributos mínimo capaz de garantir a restrição de unicidade.
 
-## Conceitos de Chave:
+### Conceitos de Chave:
 
 - Em geral, uma tabela T pode ter mais de uma chave. Cada uma delas é uma **chave candidata**.
 
@@ -192,14 +192,14 @@ Qualquer conjunto de atributos SK. Toda relação tem pelo menos uma superchave 
 
 - Cada uma das demais chaves candidatas é chamada de **chave única**.
 
-## Restrição de Integridade:
+### Restrição de Integridade:
 
 - **Restrição de integridade de entidade:** o valor de uma chave primária não pode ser NULL.
 
 - **Restrição de integridade referencial:** é especificada entre duas tabelas e usada para manter a consistência entre os seus registros.
     - Um registro de uma tabela A que referencia uma tabela B deve fazer a referência a um **registro existente** na tabela B.
 
-## Chave Estrangeira:
+### Chave Estrangeira:
 
 Considere dois esquemas de tabela T1 e T2. Um conjunto de atributos FK no esquema T1 é uma chave estrangeira de T1 que referencia T2 se:
 
@@ -207,7 +207,7 @@ Considere dois esquemas de tabela T1 e T2. Um conjunto de atributos FK no esquem
 
     - o valor de FK no registro r1 de um estado de t1(T1) ou ocorre como um valor de PK para algum registro r2 de um estado de t2(T2) ou é NULL.
 
-## Mapeamento MER -> Relacional:
+### Mapeamento MER -> Relacional:
 
 **Mapeamento:** uma forma de projetar um esquema de um banco de dados relacional (um projeto lógico) tendo como base o esquema de um projeto conceitual.
 
@@ -257,7 +257,7 @@ Exemplo:
 
 - a chave primária da tabela criada é a combinação do atributo chave da entidade forte com o atibuto chave parcial da entidade fraca.
 
-## Mapeando tipos de Relacionamentos Binários 1:1:
+### Mapeando tipos de Relacionamentos Binários 1:1:
 
 - Para cada tipo relacionamento binário 1:1 no MER, identifique as tabelas S e T que correspondem aos tipos entidade participantes no relacionamento.
 
@@ -283,7 +283,7 @@ Escolhas uma **abordagem:**
     - a terceira tabela incluirá as chaves primárias de S e T como chaves estrangeiras;
     - a chave primária da terceira tabela será uma das duas chaves estrangeiras, e a outra chave estrangeira será uma chave única.
 
-## Mapeando tipos de relacionamentos binários 1:N (N:1):
+### Mapeando tipos de relacionamentos binários 1:N (N:1):
 
 - para cada tipo relacionamento regular binário 1:N, identifique a tabela S que representa o tipo entidade que participa do tipo relacionamento uma vez.
 
@@ -291,7 +291,7 @@ Escolhas uma **abordagem:**
 
 - inclua como atributo de S todos os atirbutos simples, e os componentes simples dos atributos compostos, do tipo relacionamento.
 
-## Mapeando tipos de relacionamentos binários M:N:
+### Mapeando tipos de relacionamentos binários M:N:
 
 - para cada tipo relacionamento binário M:N crie uma nova tabela para representar o relacionamento;
 
