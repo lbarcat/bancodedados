@@ -347,6 +347,103 @@ Escolhas uma **abordagem:**
 
 ### Oracle:
 
+- Uma das ferramentas mais usadas e robustas do mercado.
+- Tem como principal virtude a robustez e confiabilidade.
+- Empresa: Oracle
+- Desde: 1980
+- Site: www.oracle.com/database
+- Licença comercial (com uma versão express)
+- Multiplataforma (AIX, HP-UX, Linux, OS X, Soalris, Windows, z/OS)
+- Suporta SQL
+
+### MySQL:
+
+- MySQL AB foi comprada pela Sun, que foi comprada pela Oracle em 2009.
+- Integração com PHP foi uma grande sacada, pequenos projetos migraram rapidamente para MySQL.
+- Empresa: Oracle
+- Desde: 1995
+- Site: www.mysql.com
+- Open Source
+- Multiplataforma (FreeBSD, Linux, OS X, Solaris, Windows)
+- Suporta SQL
+
+### SQL Server:
+
+- Um dos primeiros banco de dados do mercado. Por muito tempo ficou restrito a plataforma Windows. Sempre prezou por uma interface amigável.
+- Empresa: Microsoft
+- Desde: 1989
+- Site : wwww.microsoft.com/en-us/sql-server
+- Licença comercial (com uma versão express)
+- Multiplataforma (Windows e Linux)
+- Suporta SQL
+
+### PostgreSQL
+
+- Muito robusto, muito utilizado em sistemas com muitos registros, um dos primeiros open source a implementar UTF-8. Com certeza, uma ferramenta open source (além de BD) das mais exepcionais.
+- Responsável: PostgreSQL Global Development Group
+- Desde: 1989
+- Site: wwww.postgresql.org
+- Open Source
+- Multiplataforma (FreeBSD, HP-UX, Linux, NetBSD, OpenBSD, OS X, Solaris, Unix, Windows)
+- Suporta SQL
+
+### Como escolher?
+
+- Compreender a variedade de critérios que podem ter impacto.
+- Opção sempre por um software open source (ou, mais simplesmente, por um não pago)?
+- Plataforma
+- Implementação em Cloud - Oferecido como DBaaS;
+- Restrição com conectores ou linguagens;
+- Escolha por modelo (relacional, objetos, grafo...);
+- Tecnologias como controle de transações, triggers, stored procedures, map reduce, entre outros. 
+
+### O que muda baseado na escolha?
+
+- Como bancos de dados são todos parecidos.
+- Um SQL padrão funciona em todos.
+- Há especificações da linguagem SQL, que são para uso exclusivo com determinados produtos (como funções). Isso pode determinar retrabalho em uma futura mudança de opção de produto.
+- O mesmo serve para outros recursos do SGBD.
+- Há ferramentas específicas (nativas ou não) para cada produto.
+
+### Normalização:
+
+- Dependências Funcionais:
+    - Uma dependência funcional (DF) é uma restrição imposta a dois conjuntos de atributos de um banco de dados.
+
+    - Trata-se de uma restrição que é estabelecida pelo projetista do banco de dados, de acordo com as regras que valem no mundo real que está sendo modelado.
+
+    - É uma ferramenta que permite estabelecer uma formalização para a avaliação da qualidade do projeto de bando de dados.
+
+### Dependências Funcionais:
+
+- Uma dependência funcional é uma propriedade semântica dos atributos, e por isso ela é derivada do conhecimento que o projetista do banco de dados tem do mundo real que está sendo modelado.
+
+- O principal uso das dependências funcionais é descrever um esquema de tabela de forma mais detalhada, por meio da especificação de restrições em seus atributos que devem ser garantidas todo o tempo.
+
+- Não pode haver instâncias de relações no banco de dados que violem as dependências funcionais estabelecidas pelo projetista do banco de dados.
+- Devemos garantir que as dependências funcionais não estão sendo violadas:
+    - Primeiro (preferível): estabelecendo um bom projeto de banco de dados.
+    - Segundo: implementando funções.
+
+### Formas normais:
+
+- A qualidade de um projeto de banco de dados pode ser medida a partir da verificação da forma normal que ele alcança.
+    - primeira forma normal
+    - segunda forma normal
+    - terceira forma normal
+    - Boyce-Codd Normal Form - BCNF
+
+- Normalização:
+     - O processo de normalização é dirigido pela informação referente as dependências funcionais e as chaves dos esquemas de tabelas
+     - É um processo de análise e adequação dos esquemas de tabelas com o objetivo de minimizar redundâncias e anomalias de inserção, exclusão e alteração.
+
+No processo de normalização, esquemas de tabela que não satisfazem certas condições, são decompostos em esquemas de tabela menores que satisfazem as tais condições e ainda possuem algumas propriedades desejáveis.
+
+- A forma normal de uma tabela é a mais alta foram normal cujas condições são atendidas pela tabela.
+
+- A forma normal de um projeto de banco de dados é aquela referente a sua tabela em mais baixa forma normal.
+
+- Considerar apenas as formas normais não garante que o projeto de banco de dados está bom. É ainda preciso considerar algumas propriedades adicionais.
 
 
 ## Semana 4: Introdução a linguagem SQL, Indexação e ferramentas de manipulação de banco de dados
