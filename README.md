@@ -2,7 +2,7 @@
 
 ![mind map](image.png)
 
-Link do Mind Map: https://www.mindmeister.com/app/map/3158841554
+Link do Mind Map: https://mm.tt/app/map/3158841554?t=kEPkI9hEQV
 
 ## Semana 1: Introdução a banco de dados e modelo entidade relacionamento
 
