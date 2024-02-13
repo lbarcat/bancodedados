@@ -1,5 +1,9 @@
 # Banco de Dados
 
+![Alt text](image.png)
+
+
+
 ## Semana 1: Introdução a banco de dados e modelo entidade relacionamento
 
 ## Semana 2: Modelo relacional e mapeamento do modelo entidade-relacionamento para o modelo relacional
