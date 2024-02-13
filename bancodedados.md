@@ -153,7 +153,122 @@ Uma linha representa um fato que tipicamente corresponde a uma entidade ou relac
 
 ### Ordenação de Registros em uma tabela:
 
-Uma tabela é definida
+Uma tabela é definida como um conjunto de registros. Elementos de um conjunto não são ordenados. Assim, os registros em uma tabela não possuem nenhuma ordenação.
+
+## Ordenação de Valores dentro de um registro:
+
+Um registro é uma lista ordenada de valores, então a ordem do valores no registro é importante.
+    - Para efeitos práticos, e em determinadas situações, essa restrição pode ser flexibilizada.
+
+## Valores e NULL nos registros:
+
+Cada valor em um registro é um valor atômico. Assim, atributos compostos e atributos multivalorados não são permitidos.
+
+Valores **NULL** são usados para representar os valores desconhecidos ou que não se aplicam aquele atributo naquele registro.
+
+## Restrições de Domínio:
+
+Restrições de domínio especificam que o valor de cada atributo A deve ser um valor atômico dentro de um domínio dom(A), em todos os registros da tabela.
+
+## Restrições de Chave:
+
+Por definição, todos os elementos de um conjunto são distintos, logo, todos os registros em uma tabela devem ser distintos, ou seja, dois registros quaisquel não podem ter a mesma combinação de valores para todos os seus atributos.
+
+- r1[SK] <> r2[SK]
+
+## Superchave:
+
+Qualquer conjunto de atributos SK. Toda relação tem pelo menos uma superchave - todos os seus atributos. Uma superchave pode ter atributos redundantes.
+
+## Chave:
+
+É uma superchave de T sem atributos redundantes; i.e. é um conjuntode atributos mínimo capaz de garantir a restrição de unicidade.
+
+## Conceitos de Chave:
+
+- Em geral, uma tabela T pode ter mais de uma chave. Cada uma delas é uma **chave candidata**.
+
+- É comum escolher uma das chaves candidatas para ser a **chave primária** da relação.
+
+- Cada uma das demais chaves candidatas é chamada de **chave única**.
+
+## Restrição de Integridade:
+
+- **Restrição de integridade de entidade:** o valor de uma chave primária não pode ser NULL.
+
+- **Restrição de integridade referencial:** é especificada entre duas tabelas e usada para manter a consistência entre os seus registros.
+    - Um registro de uma tabela A que referencia uma tabela B deve fazer a referência a um **registro existente** na tabela B.
+
+## Chave Estrangeira:
+
+Considere dois esquemas de tabela T1 e T2. Um conjunto de atributos FK no esquema T1 é uma chave estrangeira de T1 que referencia T2 se:
+
+    - os atributos em FK tem o mesmo domínio dos atributos da chave primária PK em T2;
+
+    - o valor de FK no registro r1 de um estado de t1(T1) ou ocorre como um valor de PK para algum registro r2 de um estado de t2(T2) ou é NULL.
+
+## Mapeamento MER -> Relacional:
+
+**Mapeamento:** uma forma de projetar um esquema de um banco de dados relacional (um projeto lógico) tendo como base o esquema de um projeto conceitual.
+
+A maneira clássica de desenvolvimento de um banco de dados é por meio da construção de um modelo conceitual - **independente de SGBD** - o qual é posteriormente convertido, ou mapeado, para um projeto lógico que seja **implementável no SGBD** escolhido para desenvolvimento do sistema de banco de dados.
+
+Ao implementarmos o projeto lógico no SGBD teremos **garantidas** algumas **restrições** que devem ser impostas aos dados.
+
+Exemplo:
+    - Restrições de **domínio**
+    - Restrições de **chave**
+    - Restrições de **integridade referencial**
+    (chave estrangeira)
+
+Mapeando tipos entidade fortes (ou regulares):
+
+- Para cada tipo entidade forte em um MER é criada uma tabela no modelo Relacional;
+
+- Essa tabela inclui todos os atributos simples, e os componentes simples dos atributos compostos, do tipo entidade forte;
+
+- Um atributo chave da entidade é escolhido como chave primária para a tabela recém-criada.
+
+Exemplo:
+
+- FUNCIONÁRIO
+    - IDENT.
+    - DT NASC
+    - NOME
+        - P_NOME
+        - SOBRENOME
+    - ENDEREÇO
+    - SALÁRIO
+    - SEXO
+
+**Mapeando os atributos multivalorados:** para cara um desses atributos é preciso criar uma nova tabela.
+
+- essa tablea incluirá um atributo A correspondente ao atributo multivalorado, mais o atributo chave primária K da tabela que representa o tipo entidade no qual o atributo multivalorado foi especificado; 
+
+- o atributo K será uma chave estrangeira na nova tabela;
+
+- a chave primária dessa nova tabela será a combinaçã dos atibutos A e K.
+
+**Mapeando tipos entidade fracas:**
+
+- para cada tipo entidade fraca em um MER é criada uma tabela no modelo Relacional;
+
+- essa tabela inclui todos os atributos simples, e os componentes simples dos atributos compostos, do tipo entidade fraca; e inclui como atributo chave estrangeira, a chave da entidade forte associada a entidade fraca;
+
+- a chave primária da tabela criada é a combinação do atributo chave da entidade forte com o atibuto chave parcial da entidade fraca.
+
+## Mapeando tipos de Relacionamentos Binários 1:1:
+
+- Para cada tipo relacionamento binário 1:1 no MER, identifique as tabelas S e T que correspondem aos tipos entidade participantes no relacionamento.
+
+FUNCIONÁRIO -> 1 -> GERÊNCIA -> 1 -> DEPARTAMENTO
+
+Escolhas uma **abordagem:**
+
+1 - Abordagem da chave estrangeira (mais comum)
+
+
+
 
 ## Semana 3: Sistemas de gerenciamento de banco de dados de mercado e normalização
 
