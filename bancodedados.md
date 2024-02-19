@@ -203,9 +203,9 @@ Qualquer conjunto de atributos SK. Toda relação tem pelo menos uma superchave 
 
 Considere dois esquemas de tabela T1 e T2. Um conjunto de atributos FK no esquema T1 é uma chave estrangeira de T1 que referencia T2 se:
 
-    - os atributos em FK tem o mesmo domínio dos atributos da chave primária PK em T2;
+- os atributos em FK tem o mesmo domínio dos atributos da chave primária PK em T2;
 
-    - o valor de FK no registro r1 de um estado de t1(T1) ou ocorre como um valor de PK para algum registro r2 de um estado de t2(T2) ou é NULL.
+- o valor de FK no registro r1 de um estado de t1(T1) ou ocorre como um valor de PK para algum registro r2 de um estado de t2(T2) ou é NULL.
 
 ### Mapeamento MER -> Relacional:
 
@@ -447,6 +447,63 @@ No processo de normalização, esquemas de tabela que não satisfazem certas con
 
 
 ## Semana 4: Introdução a linguagem SQL, Indexação e ferramentas de manipulação de banco de dados
+
+### Ferramentas Case MySQLWorkbench
+
+### Ferramentas Case:
+
+- Uma ferramenta CASE é um produto baseado em computador que tem o propósito de ajudar os engenheiros de software em atividades relacionadas ao processo de desenvolvimento de software (baseado na definição de ferramenta CASE do Carnegie Mellon Software Engineering Institute).
+
+- Ferramentas CASE para modelagem de Banco de Dados:
+    - Ajudar na criação de **Modelos Entidade Relacionamento**
+    - Ajudar na criação de **Modelos Relacionais**
+    - Disponibilizar funcionalidades de criação automática de **Dicionário de Dados**
+    - Disponibilizar funcionalidades de criação de **scripts** de geração de banco de dados para tecnologias de SGBDs.
+    - Possibilitar a **Engenharia Reversa**
+
+É esperado que uma ferramenta CASE disponibilize **funcionalidades de verificação** quanto às regras que definem um modelo, ou que definem qualquer outro artefato do processo de desenvolvimento de software suportado por ela.
+
+- Exemplos de ferramentas CASE com recursos para atividades de modelagem de banco de dados.
+
+- Variações de valores, implementações, modelos lógicos, acesso a especificações comerciais.
+
+    - DBDesigner
+    - ERWIN
+    - DB-MAIN
+    - IBM Rational
+    - MySQLWorkbench
+
+### MySQLWorkbench:
+
+- Sem custo, MySQL, multiplataforma
+- Acessso: https://www.mysql.com/products/workbench/
+- Ferramenta visual unificada para arquitetos de banco de dados, desenvolvedores e DBAs.
+- Fornece modelagem de dados, engenharia reversa, desenvolvimento de SQL e ferramentas de administração abrangentes para configuração de servidor, administração, de usuário, backup e muito mais.
+
+### Engenharia Reversa:
+
+Em algumas situações há a disponibilidade do banco de dados implementado, mas não se conhece o modelo conceitual/relacional do mesmo.
+
+A Engenharia Reversa é a capacidade da Ferramenta CASE de acessar um banco de dados implementado e a partir dele gerar um modelo conceitual (geralmente baseado em MER).
+
+### Engenharia Reversa - MySQLWorkbench:
+
+É iniciada a partir do menu Database na opção Reverse Engineer, e na sequência será solicitada a conexão ao banco onde irá ocorrer a engenharia reversa.
+
+### Novo Modelo - MySQLWorkbench:
+
+- Criar uma implementação de banco de dados relacional, a partir de um modelo ER.
+- Lembre-se sempre de salvar o modelo e da possibilidade de gerar um script SQL a partir do modelo.
+
+- O MySQLWorkbench não é exatamente uma ferramenta
+case, porque ele não faz implementações de nível apenas
+conceitual.
+- O MySQLWorkbench pode ser considerado uma ferramenta
+de desenvolvimento para MySQL.
+- Entretanto, ela permite pensar de forma conceitual e a partir
+disso gerar uma implementação física.
+- É muito difícil e improdutivo trabalhar com banco de dados
+sem uma ferramenta de desenvolvimento como essa. 
 
 ## Semana 5: Consultas usando SQL
 
